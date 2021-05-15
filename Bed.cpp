@@ -8,6 +8,11 @@ Bed::Bed(BedCategory category)
     this->category = CategoryHelper::parseBedCategoryEnumToString(category);
 }
 
+string Bed::getCategory()
+{
+    return this->category;
+}
+
 int Bed::generateId()
 {
     lastId++;

@@ -8,20 +8,20 @@ using namespace std;
 class ReservedRoom
 {
 public:
-    ReservedRoom(int hotelId, int clientId, int roomId, int employeeId);
+    ReservedRoom(int hotelId, string clientCpf, int roomNumber, int employeeId);
 
     int getId();
     int getHotelId();
-    int getClientId();
-    int getRoomId();
+    string getClientCpf();
+    int getRoomNumber();
     int getEmployeeId();
 
 private:
     int id;
     
     int hotelId;
-    int clientId;
-    int roomId;
+    string clientCpf;
+    int roomNumber;
     int employeeId;
     
     int static lastId;

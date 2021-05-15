@@ -12,12 +12,13 @@ using namespace std;
 class Room
 {
 public:
-    Room(int number, RoomCategory category, vector <Bed> beds);
+    Room(int number, RoomCategory category);
 
     int getId();
 
     int getNumber();
     string getCategory();
+    vector <Bed> getBeds();
 
     void addBed(Bed bed);
     void removeBed(int bedId);

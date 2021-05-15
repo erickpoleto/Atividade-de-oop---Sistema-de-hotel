@@ -2,12 +2,12 @@
 
 int ReservedRoom::lastId = 0;
 
-ReservedRoom::ReservedRoom(int hotelId, int clientId, int roomId, int employeeId)
+ReservedRoom::ReservedRoom(int hotelId, string clientCpf, int roomNumber, int employeeId)
 {
     this->id = generateId();
     this->hotelId = hotelId;
-    this->clientId = clientId;
-    this->roomId = roomId;
+    this->clientCpf = clientCpf;
+    this->roomNumber = roomNumber;
     this->employeeId = employeeId;
 }
 
@@ -21,14 +21,14 @@ int ReservedRoom::getHotelId()
     return this->hotelId;
 }
 
-int ReservedRoom::getClientId()
+string ReservedRoom::getClientCpf()
 {
-    return this->clientId;
+    return this->clientCpf;
 }
 
-int ReservedRoom::getRoomId()
+int ReservedRoom::getRoomNumber()
 {
-    return this->roomId;
+    return this->roomNumber;
 }
 
 int ReservedRoom::getEmployeeId()

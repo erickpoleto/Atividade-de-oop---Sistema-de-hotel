@@ -8,6 +8,8 @@ using namespace std;
 class Client
 {
 public:
+    Client();
+    
     Client(string name, string lastName, string cpf);
     
     int getId();

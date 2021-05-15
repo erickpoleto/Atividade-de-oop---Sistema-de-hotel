@@ -8,11 +8,12 @@ using namespace std;
 class Employee
 {
 public:
-    Employee(string name);
+    Employee(string name, string password);
     
     int getId();
     
     string getName();
+    string getPassword();
     bool isActive();
 
     void setActive();
@@ -21,6 +22,7 @@ public:
 private:
     int id;
     string name;
+    string password;
 
     bool active;
     

@@ -6,6 +6,7 @@
 #include "Room.hpp"
 #include "Client.hpp"
 #include "Employee.hpp"
+#include "ReservedRoom.hpp"
 using namespace std;
 
 class Hotel
@@ -19,11 +20,13 @@ public:
     vector <Room> getRooms();
     vector <Employee> getEmployees();
     vector <Client> getClients();
+    vector <ReservedRoom> getReservedRooms();
     
     void setName(string name);
     void insertRoom(Room room);
     void insertEmployee(Employee employee);
     void insertClient(Client client);
+    void insertReservedRoom(ReservedRoom reservedRoom);
 
 private:
     int id;
@@ -32,7 +35,8 @@ private:
     vector <Room> rooms;
     vector <Employee> employees;
     vector <Client> clients;
-    
+    vector <ReservedRoom> reservedRooms;
+
     int static lastId;
     int generateId();
 };

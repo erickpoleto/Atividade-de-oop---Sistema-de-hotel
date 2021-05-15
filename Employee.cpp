@@ -2,10 +2,11 @@
 
 int Employee::lastId = 0;
 
-Employee::Employee(string name)
+Employee::Employee(string name, string password)
 {
     this->id = generateId();
     this->name = name;
+    this->password = password;
 }
 
 int Employee::getId()
@@ -16,6 +17,11 @@ int Employee::getId()
 string Employee::getName()
 {
     return this->name;
+}
+
+string Employee::getPassword()
+{
+    return this->password;
 }
 
 void Employee::setName(string name)

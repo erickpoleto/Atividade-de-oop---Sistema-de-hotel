@@ -13,6 +13,16 @@ Hotel::Hotel(string name)
     this->name = name;
 }
 
+vector <ReservedRoom> Hotel::getReservedRooms()
+{
+    return this->reservedRooms;
+}
+
+void Hotel::insertReservedRoom(ReservedRoom reservedRoom)
+{
+    this->reservedRooms.push_back(reservedRoom);
+}
+
 void Hotel::insertRoom(Room room)
 {
     this->rooms.push_back(room);

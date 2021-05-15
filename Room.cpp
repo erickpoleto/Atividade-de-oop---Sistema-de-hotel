@@ -2,7 +2,7 @@
 
 int Room::lastId = 0;
 
-Room::Room(int number, RoomCategory category, vector <Bed> beds)
+Room::Room(int number, RoomCategory category)
 {
     this->id = generateId();
     this->number = number;
@@ -14,9 +14,19 @@ int Room::getId()
     return this->id;
 }
 
+vector <Bed> Room::getBeds()
+{
+    return this->beds;
+}
+
 int Room::getNumber()
 {
     return this->number;
+}
+
+string Room::getCategory()
+{
+    return this->category;
 }
 
 void Room::addBed(Bed bed)
